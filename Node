@@ -1,0 +1,22 @@
+M = mongoDB é uma nova ideia de banco de dados trazendo conceitos de Banco de Dados Orientado a Documentos.NoSQL,NoREL não fornecem 
+relacionamentos entre documentos.os bancos de dados de documentos integram esses dados ao próprio documento,é possível armazenar dados
+relacionados de forma separada.
+
+E = Express O Express.js é um dos frameworks mais utilizados do Node.js
+
+A = Angular.js O AngularJS é um framework open-source de desenvolvimento front-end que possibilita o desenvolvimento de aplicações web, 
+com foco em simplificar tanto a codificação quanto o processo de teste. Além disso, é possível integrá-lo com bibliotecas famosas como 
+o Bootstrap, D3.js e o Apache Cordova (ou PhoneGap), ajudando a acelerar esse tipo de codificação como nunca antes tivemos.
+O AngularJS também permite aos desenvolvedores web fazer uso da linguagem de marcação HTML.
+
+
+N = Node.js o Node.js é um ambiente de execução para JavaScript, assíncrono e orientado a eventos de código aberto. O Node.js permite 
+que os desenvolvedores usem JavaScript para escrever scripts do lado do servidor. O Node.js usa um modelo de I/O direcionada a evento 
+não bloqueante que o torna leve e eficiente, ideal para aplicações em tempo real com troca intensa de dados através de dispositivos
+distribuídos.
+
+FULL stack solution Em computação, um conjunto de soluções, também conhecido como pilha de soluções ou pilha de software é um
+conjunto de subsistemas ou componentes de software necessários para criar uma plataforma completa, de modo que nenhum software
+adicional seja necessário para suportar os aplicativos.
+
+
