@@ -28,24 +28,24 @@ res. é a resposta
 
 //exemplo:
 
-const express = require("express"); (aqui estamos instanciando as constantes)
-const app = express(); (aqui estamos instanciando as constantes)
-const path = require('path'); (aqui estamos instanciando as constantes)
-const router = express.Router(); (aqui estamos instanciando as constantes)
-__diname = path.resolve(); (aqui estamos instanciando as constantes)
+const express = require("express"); //aqui estamos instanciando as constantes//
+const app = express(); //aqui estamos instanciando as constantes//
+const path = require('path'); //aqui estamos instanciando as constantes//
+const router = express.Router(); //aqui estamos instanciando as constantes//
+__diname = path.resolve(); //aqui estamos instanciando as constantes para resolver questões de encapsulamento//
 
-app.get('/',(req,res) =>{    (aqui estamos 
-  res.send("Hello World!") (send escreve na tela)
+app.get('/',(req,res) =>{    //aqui estamos colocando a barra para demonstrar que será pego um link do navegador//
+res.send('Hello World!'     //aqui estamos usando o res.send para escrever na tela o que eu quero//
 })
 
-app.listen(process.env.port || 3000); (onde colocamos em qual porta do servidor vamos deixar essa aplicação)
+app.listen(process.env.port || 3000); //onde colocamos em qual porta do servidor vamos deixar essa aplicação, a porta mais usada é a 8080)
 
-console.log('Running at Port 3000'); (aparece no CMD para ter rastreabilidade no código)
-
+console.log('Running at Port 3000'); //aparece no -console-CMD para ter rastreabilidade no código//
 
 
 //bodyParsey > vamos acessar a body como se o body estivesse encapsulada e por meio desse ele desencapsula
 
+//Novo código para que possamos ao inves de só escrever com o res.send, possamos usar o comando para renderizar a página html com o ejs que faz com que possamos manipular variáveis no html 
 
 const express = require("express");
 const app = express();
@@ -53,15 +53,15 @@ const path = require('path');
 const router = express.Router();
 __diname = path.resolve();
 
-var bodyParser = require('body-parser');
-app.use(bodyParser.urlencoded({ extended: false }))
+var bodyParser = require('body-parser'); //o comando bodyperser que nós pedimos para instalar é um desencapsulador da tag body 
+app.user(bodyParser.urlencoded({ extended: false }))
 
-app.engine('html', require('ejs').renderFile); ( uqer dizer quwe o html serpa renderizado)
+app.engine('html', require('ejs').renderFile);//quer dizer quwe o html será renderizado ele lê o arquivo html e usa o ejs que foi um pacote que instalamos)
 
-app.get('/',(req,res) =>{
-  res.render(__diname+'/views/home.html'); (render renderiza a página)
+app.get('/',(req,res) =>{     //pode ser usado ao inves de => o comando de function que é a mesma coisa
+  res.render(__diname+'/views/home.html'); //render renderiza a página, quer dizer que ele vai olhar a pasta views//
 })
 
-app.listen(process.env.port || 3000);
+app.listen(process.env.port || 3000); //novamente a porta que iremos utilizar o comando app.listen para//
 
 console.log('Running at Port 3000');
