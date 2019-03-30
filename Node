@@ -19,4 +19,49 @@ FULL stack solution Em computação, um conjunto de soluções, também conhecid
 conjunto de subsistemas ou componentes de software necessários para criar uma plataforma completa, de modo que nenhum software
 adicional seja necessário para suportar os aplicativos.
 
+Liten >> é qual a porta ele vai acessar 
+"/" > é quando vai acessar a url
+app> é express
+.get > quer dizer que ele vai acessar 
+req. é a requisição 
+res. é a resposta 
 
+//exemplo:
+
+const express = require("express"); (aqui estamos instanciando as constantes)
+const app = express(); (aqui estamos instanciando as constantes)
+const path = require('path'); (aqui estamos instanciando as constantes)
+const router = express.Router(); (aqui estamos instanciando as constantes)
+__diname = path.resolve(); (aqui estamos instanciando as constantes)
+
+app.get('/',(req,res) =>{    (aqui estamos 
+  res.send("Hello World!") (send escreve na tela)
+})
+
+app.listen(process.env.port || 3000); (onde colocamos em qual porta do servidor vamos deixar essa aplicação)
+
+console.log('Running at Port 3000'); (aparece no CMD para ter rastreabilidade no código)
+
+
+
+//bodyParsey > vamos acessar a body como se o body estivesse encapsulada e por meio desse ele desencapsula
+
+
+const express = require("express");
+const app = express();
+const path = require('path');
+const router = express.Router();
+__diname = path.resolve();
+
+var bodyParser = require('body-parser');
+app.use(bodyParser.urlencoded({ extended: false }))
+
+app.engine('html', require('ejs').renderFile); ( uqer dizer quwe o html serpa renderizado)
+
+app.get('/',(req,res) =>{
+  res.render(__diname+'/views/home.html'); (render renderiza a página)
+})
+
+app.listen(process.env.port || 3000);
+
+console.log('Running at Port 3000');
